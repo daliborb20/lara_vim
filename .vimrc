@@ -30,9 +30,13 @@ let mapleader = ',' "remapiranje leader tipke na zarez'
 "editovanje vimrc fajla"
 nmap <leader>ev :tabedit $MYVIMRC <cr>
 nmap <leader><space> :nohlsearch<cr>
+"------------------podesavanje nerdtree-------------
+map <C-n> :NERDTreeToggle<CR>
 "------------------podesavanje ctrlp--------------
 nmap <D-e> :CtrlPMRUFiles<cr>
 let g:ctrlp_match_window = 'top, order:ttb, min:1, max:30, results:30'
+let NERDTreeHijackNetrw =0
+
 "-------------------------auto-comande------------"
 
 "automatsko source-ovanje vimrc fala

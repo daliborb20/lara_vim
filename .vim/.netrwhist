@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/opt/lampp/htdocs/lin_php/cms/includes'
 let g:netrw_dirhist_2='/opt/lampp/htdocs/lin_php/cms'
 let g:netrw_dirhist_3='/home/boogyman'
 let g:netrw_dirhist_4='/home/boogyman/.vim'
 let g:netrw_dirhist_5='/home/boogyman'
+let g:netrw_dirhist_6='/home/boogyman/.vim/palenight.vim'
+let g:netrw_dirhist_7='/home/boogyman'
