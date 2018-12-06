@@ -19,6 +19,13 @@ Plugin 'ervandew/supertab'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'tobyS/vmustache'
+Plugin 'tobyS/pdv'
+Plugin 'SirVer/ultisnips'
+Plugin 'mattn/emmet-vim'
+
+
+
 
 call vundle#end()            " required
 filetype plugin indent on    " required

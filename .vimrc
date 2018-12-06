@@ -4,8 +4,8 @@
 "set complete=.,w >>>>>>>>>>>>> autocomplete za trenutni buffer i windows
 "vracanje na tacku editovanaj CTRL-O zapovratak na stari CTRL-I
 "dodavanje polozaja sa M i kucanje marks za pregled
-
-
+"korisno prilikom brisanja d ' m >>>>brise od oznake
+"idi na zadnje editovanje koristeci '
 
 syntax enable
 set relativenumber
@@ -13,6 +13,12 @@ set nu
 set complete=.,w,b,u "setovanje autocomplete-a"
 let g:onedark_termcolors=16
 so ~/.vim/plugins.vim "refaktorisan fajl za pluginove
+set tabstop=4
+set expandtab
+set softtabstop=4
+set shiftwidth=4
+                    
+    
 
 "-------------------visual--------------------"
 set background=dark
@@ -41,6 +47,7 @@ nmap <C-H> <C-W><C-H>
 let mapleader = ',' "remapiranje leader tipke na zarez'
 "editovanje vimrc fajla"
 nmap <leader>ev :tabedit $MYVIMRC <cr>
+nmap <leader>ep :tabedit ~/.vim/plugins.vim<cr>
 nmap <leader>es :tabedit ~/.vim/snippets/php.snippets<cr>
 nmap <leader><space> :nohlsearch<cr>
 
@@ -65,6 +72,9 @@ nnoremap <silent><leader>pf :call PhpCsFixerFixFile()<CR>
 "-------------------------Laravel Specifik------------"
 nmap <Leader>lr :e /opt/lamp/lin_php/cms/index.php<cr>
 
+"-------------------------tobys PDV------------"
+let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
+nnoremap <leader>d :call pdv#DocumentWithSnip()<CR>
 "-------------------------php names------------"
 function! IPhpInsertUse()
 	    call PhpInsertUse()
@@ -72,6 +82,11 @@ function! IPhpInsertUse()
 	endfunction
 	autocmd FileType php inoremap <Leader>n <Esc>:call IPhpInsertUse()<CR>
 	autocmd FileType php noremap <Leader>n :call PhpInsertUse()<CR>
+
+"-------------------------SNippets zadnji------------"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
 "++++++++++++++++++++++++++Automatsko sortiranje klasa++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 "Sort PHP use statements
